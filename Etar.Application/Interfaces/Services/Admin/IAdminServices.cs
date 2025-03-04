@@ -9,6 +9,6 @@ namespace Etar.Application.Interfaces.Services.Admin
 {
     public interface IAdminServices
     {
-        IUserService CRUDServices { get; }
+        IUserService UserServices { get; }
     }
 }

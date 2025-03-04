@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Etar.Common\Etar.Common.csproj" />
     <ProjectReference Include="..\Etar.Domain\Etar.Domain.csproj" />
   </ItemGroup>
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Etar.Application.Services.Admins
 {
-    public class AdminServices :IAdminServices
+    public class AdminServices : IAdminServices
     {
         private readonly IDataBaseContext _context;
         public AdminServices(IDataBaseContext context)

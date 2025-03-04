@@ -1,4 +1,5 @@
 ﻿using Etar.Application.Interfaces.Context;
+using Etar.Common;
 using Etar.Domain.Entities;
 
 namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
@@ -14,7 +15,7 @@ namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
 
         public Result Execute(ReqAddNewAdminDto request)
         { 
-            if(request.UserName.Length >= 8)
+            if(request.UserName.Length >= 5)
             {
                 // ادمینی با نام کاربری مشابه
                 var foundedAdmin = _context.admins.Where(a => a.UserName == request.UserName).FirstOrDefault();
@@ -25,12 +26,15 @@ namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
                     {
                         if (request.Password == request.RePassword)
                         {
+                            PasswordHasher hasher = new PasswordHasher();
                             _context.admins.Add(new Domain.Entities.Users.Admin()
                             {
                                 UserName = request.UserName,
-                                Password = request.Password,
+                                Password = hasher.HashPassword(request.Password),
 
                             });
+
+                            _context.SaveChanges();
 
                             return new Result()
                             {
@@ -64,7 +68,7 @@ namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
             return new Result()
             {
                 IsSuccess = false,
-                Message = "طول نام کاربری باید بیش از 8 کاراکتر باشد"
+                Message = "طول نام کاربری باید بیش از 5 کاراکتر باشد"
             };
         }
     }
