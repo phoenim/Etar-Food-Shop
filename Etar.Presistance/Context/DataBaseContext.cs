@@ -15,7 +15,7 @@ namespace Etar.Presistance.Context
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options) 
         { }
 
-        public DbSet<User> users { get; set; }
+        public DbSet<Client> users { get; set; }
         public DbSet<Admin> admins { get; set; }
         public DbSet<Address> addresses { get ; set; }
 

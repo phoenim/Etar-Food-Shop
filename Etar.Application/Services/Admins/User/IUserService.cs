@@ -1,24 +1,24 @@
 ﻿using Etar.Application.Interfaces.Context;
-using Etar.Application.Services.Admins.CRUD.Commands.AddNewAdmin;
+using Etar.Application.Services.Admins.User.Commands.AddNewAdmin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Etar.Application.Services.Admins.CRUD
+namespace Etar.Application.Services.Admins.User
 {
-    public interface ICRUDService
+    public interface IUserService
     {
         //سرویس افزودن ادمین جدید
         IAddNewAdminService addNewAdminService { get; }
     }
 
-    public class CRUDService :ICRUDService
+    public class UserService :IUserService
     {
         private readonly IDataBaseContext _context;
 
-        public CRUDService(IDataBaseContext context)
+        public UserService(IDataBaseContext context)
         {
             _context = context;
         }

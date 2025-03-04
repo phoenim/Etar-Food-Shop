@@ -1,6 +1,6 @@
 ﻿using Etar.Application.Interfaces.Context;
 using Etar.Application.Interfaces.Services.Admin;
-using Etar.Application.Services.Admins.CRUD;
+using Etar.Application.Services.Admins.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +17,12 @@ namespace Etar.Application.Services.Admins
             _context = context;
         }
 
-        private ICRUDService _crudServices;
-        public ICRUDService CRUDServices
+        private IUserService _userServices;
+        public IUserService UserServices
         {
             get
             {
-                return _crudServices = _crudServices ?? new CRUDService(_context);
+                return _userServices = _userServices ?? new UserService(_context);
             }
         }
     }

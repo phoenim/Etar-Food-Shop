@@ -1,4 +1,4 @@
-﻿using Etar.Application.Services.Admins.CRUD;
+﻿using Etar.Application.Services.Admins.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace Etar.Application.Interfaces.Services.Admin
 {
     public interface IAdminServices
     {
-        ICRUDService CRUDServices { get; }
+        IUserService CRUDServices { get; }
     }
 }

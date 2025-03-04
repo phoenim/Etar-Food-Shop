@@ -1,4 +1,4 @@
-﻿namespace Etar.Application.Services.Admins.CRUD.Commands.AddNewAdmin
+﻿namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
 {
     public class ReqAddNewAdminDto
     {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Etar.Domain.Entities.Users
 {
-    public class User : BaseEntity
+    public class Client : BaseEntity
     {
         [Key]
         public Guid Id { get; set; }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Etar.Application.Services.Admins.CRUD.Commands.AddNewAdmin
+namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
 {
     public interface IAddNewAdminService
     {

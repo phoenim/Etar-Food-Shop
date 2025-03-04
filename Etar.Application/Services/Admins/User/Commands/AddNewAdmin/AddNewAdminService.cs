@@ -1,7 +1,7 @@
 ﻿using Etar.Application.Interfaces.Context;
 using Etar.Domain.Entities;
 
-namespace Etar.Application.Services.Admins.CRUD.Commands.AddNewAdmin
+namespace Etar.Application.Services.Admins.User.Commands.AddNewAdmin
 {
     public class AddNewAdminService : IAddNewAdminService
     {

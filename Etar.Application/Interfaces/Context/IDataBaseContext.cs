@@ -11,7 +11,7 @@ namespace Etar.Application.Interfaces.Context
 {
     public interface IDataBaseContext
     {
-        DbSet<User> users { get; set; }
+        DbSet<Client> users { get; set; }
         DbSet<Admin> admins { get; set; }
         DbSet<Address> addresses { get; set; }
         

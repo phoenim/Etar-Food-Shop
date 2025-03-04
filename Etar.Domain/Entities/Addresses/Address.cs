@@ -17,7 +17,7 @@ namespace Etar.Domain.Entities.Addresses
         public int  Tag {  get; set; }
         public string Describtion {  get; set; }
 
-        public virtual User User { get; set; }
-        public Guid UserId { get; set; }
+        public virtual Client Client { get; set; }
+        public Guid ClientId { get; set; }
     }
 }
