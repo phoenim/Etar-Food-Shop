@@ -1,7 +1,17 @@
+using Etar.Application.Interfaces.Context;
+using Etar.Application.Interfaces.Services.Admin;
+using Etar.Application.Services.Admins;
+using Etar.Presistance.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionStr = builder.Configuration.GetConnectionString("DefualtConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDataBaseContext, DataBaseContext>();
+builder.Services.AddScoped<IAdminServices, AdminServices>();
+builder.Services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(connectionStr));
 
 var app = builder.Build();
 
